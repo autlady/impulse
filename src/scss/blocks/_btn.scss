@@ -1,0 +1,26 @@
+.btn {
+    display: inline-block;
+
+    padding: 0 43px;
+    height: 41px;
+
+    border-radius: 50px;
+    border: none;
+
+    background-color: var(--accent-red);
+
+    color: var(--color-white);
+    text-align: center;
+    font-family: inherit;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 41px;
+    white-space: nowrap;
+
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+
+    &:hover {
+        background-color: lighten($color: #fe3f44, $amount: 5%);;
+    }
+}
