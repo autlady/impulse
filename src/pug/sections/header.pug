@@ -1,16 +1,28 @@
 header.header
    .header-top
-      button.menu-toggle
-         span
-      a(href="#!").logo
-         img(src="./img/logo.webp" srcset="./img/logo@2x.webp 2x" alt="логотип" width="124" height="53" loading="lazy")
-      ul.header__contacts
-         li
-            p Г. Магас, Кайсына Кулиева 32
-         li
-            p Пн-Вс: 9:00-21:00
-         li
-            a(href="tel:84951459033") 8 (495) 145-90-33
+      .menu-wrapper
+         nav.menu
+            a(href="#!").logo
+               img(src="./img/logo.webp" srcset="./img/logo@2x.webp 2x" alt="логотип" width="180" height="77" loading="lazy")
+            ul.menu__list
+               li
+                  a(href="#!") Главная
+               li
+                  a(href="#!") Услуги
+               li
+                  a(href="#!") Контакты
+      .header-row
+         button.menu-toggle
+            .menu-toggle__middle
+         a(href="#!").logo
+            img(src="./img/logo.webp" srcset="./img/logo@2x.webp 2x" alt="логотип" width="124" height="53" loading="lazy")
+         ul.header__contacts
+            li
+               p Г. Магас, Кайсына Кулиева 32
+            li
+               p Пн-Вс: 9:00-21:00
+            li
+               a(href="tel:84951459033") 8 (495) 145-90-33
    .header-banner
       .container
          .header-content

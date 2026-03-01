@@ -1,16 +1,45 @@
-// const toggleMenu = document.querySelector('menu-toggle');
+document.addEventListener("DOMContentLoaded", function () {
 
-// if (toggleMenu){
-//     toggleMenu.addEventListener('click', function(){
-        
-//         if(this.classList.contains('active')){
-//             this.classList.remove('active');
-//         }else{
-//             this.classList.add('active');
-//         }
-//     })
-// }
+  const toggleMenu = document.querySelector('.menu-toggle');
+  const headerTop = document.querySelector('.header-top');
+  const menu = document.querySelector('.menu-wrapper');
+  const bodyEl = document.body;
 
+  function closeMenu() {
+    toggleMenu.classList.remove('active');
+    headerTop.classList.remove('active');
+    menu.style.height = 0;
+    bodyEl.classList.remove('lock');
+  }
+
+  function openMenu() {
+    toggleMenu.classList.add('active');
+    headerTop.classList.add('active');
+    menu.style.height = '100vh';
+    bodyEl.classList.add('lock');
+  }
+
+if (toggleMenu){
+    toggleMenu.addEventListener('click', function(){
+
+        if(this.classList.contains('active')){
+          closeMenu();
+        }else{
+          openMenu();
+        }
+    })
+}
+
+const menuItems = menu.querySelectorAll('a');
+
+menuItems.forEach(function (item) {
+    item.addEventListener('click', function () {
+        for (el of menuItems) {
+          closeMenu();
+        }
+    });
+}
+);
 
 
 const swiper = new Swiper('#products-slider', {
@@ -30,3 +59,4 @@ const swiper = new Swiper('#products-slider', {
 });
 
 
+})
