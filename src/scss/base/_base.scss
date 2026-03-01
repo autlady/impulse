@@ -142,6 +142,10 @@ select:-webkit-autofill:focus {
   max-width: 1530px;
 }
 
+.section-box {
+  padding-block: 30px;
+}
+
 // TYPOGRAPHY
 
 .headline {
@@ -150,5 +154,12 @@ select:-webkit-autofill:focus {
   font-size: 48px;
   line-height: 1.16;
   color: #fff;
+}
+
+.section-title {
+  font-family: var(--second-family);
+  font-size: 48px;
+  line-height: 0.94;
+  color: var(--rozovyy-norm);
 }
 
