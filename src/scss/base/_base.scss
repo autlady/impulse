@@ -131,15 +131,14 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+main {
+  background-color: var(--seryy);
+}
+
 .container {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 15px;
-}
-
-.containerXL {
-  width: 100%;
-  max-width: 1530px;
 }
 
 .section-box {
