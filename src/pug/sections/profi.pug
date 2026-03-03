@@ -1,0 +1,30 @@
+// PROFI
+section.profi.section-box
+   .container
+      h2.profi__title.section-title Наши<br> мастера
+      ul.list-group
+         li.list-group-item(data-tab="tab-1") Парикмахерские услуги
+         li.list-group-item(data-tab="tab-2") Макияж, уход за лицом
+      .card(data-tab-content id="tab-1")
+         .swiper.profi-slider
+            // slider controls
+            button.slider-prev#slider-prev-prod
+               svg.svg-prev
+                  use(href="./img/spriteSvg.svg#svg-prev")
+            button.slider-next#slider-next-prod
+               svg.svg-next
+                  use(href="./img/spriteSvg.svg#svg-next")
+            .swiper-wrapper
+               .swiper-slide
+                  .profi-card
+                     .profi-card__img
+                        img(src="./img/profi/profi01.webp" srcset="./img/profi/profi01@2x.webp 2x" alt="парикмахер стилист" width="204" height="288" loading="lazy")
+                     .profi-card__content
+                        .profi-card__title
+                           h3 Айшат Бекова
+                           p Парикмахер стилист
+                           span Опыт работы 3 года
+                        .profi-card__text
+                           p Окончила курсы «Современный стиль и колористика» в Академии красоты «Стиль»
+                           p Специализируется на женских стрижках и сложных техниках окрашивания. Создаёт образы, подчёркивающие индивидуальность клиента.
+      .card(data-tab-content id="tab-2")

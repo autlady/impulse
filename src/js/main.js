@@ -41,16 +41,45 @@ menuItems.forEach(function (item) {
 }
 );
 
+  // GALLERY SLIDER
+  let specificSwiperGallery = null;
 
-const swiper = new Swiper('#products-slider', {
+  function initSpecificSwiperGallery() {
+    const windowWidth = window.innerWidth;
+    const swiperContainerGallery = document.querySelector(".gallery-slider");
 
-  slidesPerView: 3,
-  spaceBetween: 32,
-  loop: true,
+    if (windowWidth <= 767 && swiperContainerGallery && !specificSwiperGallery) {
+      specificSwiperGallery = new Swiper(".gallery-slider", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          525: {
+            spaceBetween: 16,
+            slidesPerView: 2,
+          },
+        },
+      });
+    }
 
-  pagination: {
-    el: '#products-slider-pagination',
-  },
+    if (windowWidth > 767 && specificSwiperGallery) {
+      specificSwiperGallery.destroy(true, true);
+      specificSwiperGallery = null;
+    }
+  }
+
+  initSpecificSwiperGallery();
+  window.addEventListener("resize", initSpecificSwiperGallery);
+  /************************************* */
+
+
+const swiperStilist= new Swiper('stilist-slider', {
+
+  slidesPerView: 1,
+  spaceBetween: 16,
 
   navigation: {
     nextEl: '#btn-next',
@@ -58,5 +87,15 @@ const swiper = new Swiper('#products-slider', {
   },
 });
 
-
+	/* ==== Fancybox ===== */
+	Fancybox.bind('[data-fancybox]', {
+    Thumbs: false,
+    Toolbar: {
+     display: {
+     left: [],
+     middle: [],
+     right: [ "close"],
+     },
+   },
+ });
 })
