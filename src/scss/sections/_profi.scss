@@ -16,13 +16,13 @@
     justify-content: space-between;
 }
 
-.list-group {
+.tabs {
     align-self: flex-end;
     flex-shrink: 0;
     max-width: 223px;
 }
 
-.list-group-item {
+.tab-btn {
     padding-bottom: 5px;
     position: relative;
     cursor: pointer;
@@ -31,11 +31,11 @@
     color: #000;
 }
 
-.list-group-item .svg-arrow {
+.tab-btn .svg-arrow {
     margin-left: 10px;
 }
 
-.list-group-item::before {
+.tab-btn::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -47,25 +47,29 @@
     border-radius: 10px;
 }
 
-.list-group-item + .list-group-item {
+.tab-btn + .tab-btn {
     margin-top: 13px;
 }
 
-.list-group-item.active {
+.tab-btn.active {
     color: var(--rozovyy-norm);
 }
 
-.card {
+.swipers-container {
     position: relative;
 }
 
-.stilist-slider, .visagist-slider, .nailprofi-slider, .browprofi-slider {
+.profi-slider {
+    display: none;
     height: 288px;
 }
 
+.profi-slider.active {
+    display: block;
+}
+
 .slider-controls {
-    right: -80px;
-    border: red 1px solid;
+    right: -60px;
     position: absolute;
     display: flex;
     flex-direction: column;
