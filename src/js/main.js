@@ -76,14 +76,47 @@ menuItems.forEach(function (item) {
   /************************************* */
 
 
-const swiperStilist= new Swiper('stilist-slider', {
-
+const swiperStilist= new Swiper('.stilist-slider', {
+  direction: 'vertical',
   slidesPerView: 1,
   spaceBetween: 16,
 
   navigation: {
-    nextEl: '#btn-next',
-    prevEl: '#btn-prev',
+    nextEl: '#slider-next-stilist',
+    prevEl: '#slider-prev-stilist',
+  },
+});
+
+const swiperVisagist= new Swiper('.visagist-slider', {
+  direction: 'vertical',
+  slidesPerView: 1,
+  spaceBetween: 16,
+
+  navigation: {
+    nextEl: '#slider-next-visagist',
+    prevEl: '#slider-prev-visagist',
+  },
+});
+
+const swiperNailprofi= new Swiper('.nailprofi-slider', {
+  direction: 'vertical',
+  slidesPerView: 1,
+  spaceBetween: 16,
+
+  navigation: {
+    nextEl: '#slider-next-nailprofi',
+    prevEl: '#slider-prev-nailprofi',
+  },
+});
+
+const swiperBrowprofi= new Swiper('.browprofi-slider', {
+  direction: 'vertical',
+  slidesPerView: 1,
+  spaceBetween: 16,
+
+  navigation: {
+    nextEl: '#slider-next-browprofi',
+    prevEl: '#slider-prev-browprofi',
   },
 });
 
@@ -98,4 +131,27 @@ const swiperStilist= new Swiper('stilist-slider', {
      },
    },
  });
-})
+});
+
+// Нашли все заголовки табов по data атрибуту
+const tabHeaders = document.querySelectorAll('[data-tab]');
+// Нашли все контент боксы
+const contentBoxes = document.querySelectorAll('[data-tab-content]');
+
+for (item of tabHeaders) {
+    item.addEventListener('click', function(e) {
+        for (el of tabHeaders) {
+            el.classList.remove('active');
+        }
+        e.target.classList.add('active');
+
+        // 1. Скрыть все content box
+        contentBoxes.forEach(function (item) {
+            item.classList.add('hidden');
+        });
+
+        // 2. Выбрать нужный content box и показать его
+        const contentBox = document.querySelector('#' + this.dataset.tab);
+        contentBox.classList.remove('hidden');
+    })
+}

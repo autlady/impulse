@@ -1,30 +1,159 @@
 // PROFI
 section.profi.section-box
    .container
-      h2.profi__title.section-title Наши<br> мастера
-      ul.list-group
-         li.list-group-item(data-tab="tab-1") Парикмахерские услуги
-         li.list-group-item(data-tab="tab-2") Макияж, уход за лицом
-      .card(data-tab-content id="tab-1")
-         .swiper.profi-slider
-            // slider controls
-            button.slider-prev#slider-prev-prod
-               svg.svg-prev
-                  use(href="./img/spriteSvg.svg#svg-prev")
-            button.slider-next#slider-next-prod
-               svg.svg-next
-                  use(href="./img/spriteSvg.svg#svg-next")
-            .swiper-wrapper
-               .swiper-slide
-                  .profi-card
-                     .profi-card__img
-                        img(src="./img/profi/profi01.webp" srcset="./img/profi/profi01@2x.webp 2x" alt="парикмахер стилист" width="204" height="288" loading="lazy")
-                     .profi-card__content
-                        .profi-card__title
-                           h3 Айшат Бекова
-                           p Парикмахер стилист
-                           span Опыт работы 3 года
-                        .profi-card__text
-                           p Окончила курсы «Современный стиль и колористика» в Академии красоты «Стиль»
-                           p Специализируется на женских стрижках и сложных техниках окрашивания. Создаёт образы, подчёркивающие индивидуальность клиента.
-      .card(data-tab-content id="tab-2")
+      .profi-content
+         // ЛЕВАЯ КОЛОНКА
+         .profi-col
+            // ЗАГОЛОВОК
+            h2.profi__title.section-title Наши<br> мастера
+            // СПИСОК
+            ul.list-group
+               li.list-group-item.active(data-tab="tab-1") Парикмахерские услуги
+                  svg.svg-arrow
+                     use(href="./img/spriteSvg.svg#svg-arrow")
+               li.list-group-item(data-tab="tab-2") Макияж, уход за лицом
+                  svg.svg-arrow
+                     use(href="./img/spriteSvg.svg#svg-arrow")
+               li.list-group-item(data-tab="tab-3") Маникюр, педикюр
+                  svg.svg-arrow
+                     use(href="./img/spriteSvg.svg#svg-arrow")
+               li.list-group-item(data-tab="tab-4") Эпиляция, бровинг
+                  svg.svg-arrow
+                     use(href="./img/spriteSvg.svg#svg-arrow")
+         // СЛАЙДЕРЫ
+         .cards
+            // СЛАЙДЕР 1
+            .card(data-tab-content id="tab-1")
+               // slider controls
+               .slider-controls
+                  button.slider-prev#slider-prev-stilist
+                     svg.svg-arrow
+                        use(href="./img/spriteSvg.svg#svg-arrow")
+                  button.slider-next#slider-next-stilist
+                     svg.svg-arrow
+                        use(href="./img/spriteSvg.svg#svg-arrow")
+               .swiper.stilist-slider
+                  .swiper-wrapper
+                     // СЛАЙД
+                     .swiper-slide
+                        .profi-card
+                           .profi-card__img
+                              img(src="./img/profi/profi01.webp" srcset="./img/profi/profi01@2x.webp 2x" alt="парикмахер стилист" width="204" height="288" loading="lazy")
+                           .profi-card__content
+                              .profi-card__title
+                                 h3 Айшат Бекова
+                                 p Парикмахер стилист
+                                 span Опыт работы 3 года
+                              .profi-card__text
+                                 p Окончила курсы «Современный стиль и колористика» в Академии красоты «Стиль»
+                                 p Специализируется на женских стрижках и сложных техниках окрашивания. Создаёт образы, подчёркивающие индивидуальность клиента.
+                     // СЛАЙД
+                     .swiper-slide
+                        .profi-card
+                           .profi-card__img
+                              img(src="./img/profi/profi03.webp" alt="парикмахер стилист" width="204" height="288" loading="lazy")
+                           .profi-card__content
+                              .profi-card__title
+                                 h3 Наталья Михайлова
+                                 p Парикмахер стилист
+                                 span Опыт работы 7 лет
+                              .profi-card__text
+                                 p Работает с волосами любой сложности, включая сильно повреждённые и ранее окрашенные.
+                                 p В основе работы — индивидуальный подход и внимание к деталям. Помогает клиентам найти свой стиль: от элегантной классики до смелых экспериментов
+            // СЛАЙДЕР 2
+            .card.hidden(data-tab-content id="tab-2")
+               .swiper.visagist-slider
+                  // slider controls
+                  .slider-controls
+                     button.slider-prev#slider-prev-visagist
+                        svg.svg-arrow
+                           use(href="./img/spriteSvg.svg#svg-arrow")
+                     button.slider-next#slider-next-visagist
+                        svg.svg-arrow
+                           use(href="./img/spriteSvg.svg#svg-arrow")
+                  .swiper-wrapper
+                     .swiper-slide
+                        .profi-card
+                           .profi-card__img
+                              img(src="./img/profi/profi02.webp" alt="визажист" width="204" height="288" loading="lazy")
+                           .profi-card__content
+                              .profi-card__title
+                                 h3 Анна Самойлова
+                                 p Дипломированный визажист
+                                 span Опыт работы 5 лет
+                              .profi-card__text
+                                 p Окончила курсы профессионального визажа в Loreal professional
+                                 p Владеет техниками дневного, вечернего и сценического макияжа. Регулярно участвует в отраслевых мастер‑классах для освоения новых трендов.
+                     .swiper-slide
+                        .profi-card
+                           .profi-card__img
+                              img(src="./img/profi/profi01.webp" srcset="./img/profi/profi01@2x.webp 2x" alt="косметолог" width="204" height="288" loading="lazy")
+                           .profi-card__content
+                              .profi-card__title
+                                 h3 Тамелла Нуриева
+                                 p Косметолог
+                                 span Опыт работы 8 лет
+                              .profi-card__text
+                                 p Специализуется на восстановлении кожи после акне, anti-age процедурах и комплексном уходе.
+            // СЛАЙДЕР 3
+            .card.hidden(data-tab-content id="tab-3")
+               .swiper.nailprofi-slider
+                  // slider controls
+                  .slider-controls
+                     button.slider-prev#slider-prev-nailprofi
+                        svg.svg-arrow
+                           use(href="./img/spriteSvg.svg#svg-arrow")
+                     button.slider-next#slider-next-nailprofi
+                        svg.svg-arrow
+                           use(href="./img/spriteSvg.svg#svg-arrow")
+                  .swiper-wrapper
+                     .swiper-slide
+                        .profi-card
+                           .profi-card__img
+                              img(src="./img/profi/profi04.webp" alt="мастер ногтевого сервиса" width="204" height="288" loading="lazy")
+                           .profi-card__content
+                              .profi-card__title
+                                 h3 Диана Петрова
+                                 p Мастер по маникюру
+                                 span Опыт работы 4 года
+                              .profi-card__text
+                                 p Окончила курсы «Мастер ногтевого сервиса»
+                                 p Классический, аппаратный, комбинированный маникюр и педикюр. Дизайн любой сложности. В работе используются материалы премиум -сегмента
+            // СЛАЙДЕР 4
+            .card.hidden(data-tab-content id="tab-4")
+               .swiper.browprofi-slider
+                  // slider controls
+                  .slider-controls
+                     button.slider-prev#slider-prev-browprofi
+                        svg.svg-arrow
+                           use(href="./img/spriteSvg.svg#svg-arrow")
+                     button.slider-next#slider-next-browprofi
+                        svg.svg-arrow
+                           use(href="./img/spriteSvg.svg#svg-arrow")
+                  .swiper-wrapper
+                     .swiper-slide
+                        .profi-card
+                           .profi-card__img
+                              img(src="./img/profi/profi05.webp" alt="мастер ногтевого сервиса" width="204" height="288" loading="lazy")
+                           .profi-card__content
+                              .profi-card__title
+                                 h3 Алина Алеева
+                                 p Мастер - бровист
+                                 span Опыт работы 5 лет
+                              .profi-card__text
+                                 p Окончила курсы «Мастер-бровист»
+                                 p Коррекция формы (пинцет, воск, нить); окрашивание краской и хной;ламинирование бровей; консультации по уходу и укладке.
+                     .swiper-slide
+                        .profi-card
+                           .profi-card__img
+                              img(src="./img/profi/profi06.webp" alt="мастер ногтевого сервиса" width="204" height="288" loading="lazy")
+                           .profi-card__content
+                              .profi-card__title
+                                 h3 Анастасия Меньшова
+                                 p Мастер по эпиляции и депиляции
+                                 span Опыт работы 6 лет
+                              .profi-card__text
+                                 p Окончила курсы «Мастер по депиляции»
+                                 p Оказывает разные виды услуг по удалению волос (воск, сахар, лазер)
+      .profi__btn
+         a(href="#!").btn Онлайн запись

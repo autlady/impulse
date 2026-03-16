@@ -1,0 +1,137 @@
+.profi {
+    overflow: hidden;
+}
+
+.profi-content {
+    margin-bottom: 34px;
+    display: flex;
+    column-gap: 20px;
+}
+
+.profi-col {
+    flex-shrink: 0;
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-group {
+    align-self: flex-end;
+    flex-shrink: 0;
+    max-width: 223px;
+}
+
+.list-group-item {
+    padding-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.16;
+    color: #000;
+}
+
+.list-group-item .svg-arrow {
+    margin-left: 10px;
+}
+
+.list-group-item::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background-color: var(--rozovyy-norm);
+    border-radius: 10px;
+}
+
+.list-group-item + .list-group-item {
+    margin-top: 13px;
+}
+
+.list-group-item.active {
+    color: var(--rozovyy-norm);
+}
+
+.card {
+    position: relative;
+}
+
+.stilist-slider, .visagist-slider, .nailprofi-slider, .browprofi-slider {
+    height: 288px;
+}
+
+.slider-controls {
+    right: -80px;
+    border: red 1px solid;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    transform: translateY(-50%);
+    row-gap: 47px;
+    z-index: 5;
+
+    .slider-prev {
+        transform: rotate(-90deg);
+    }
+
+    .slider-next {
+        transform: rotate(90deg);
+    }
+}
+
+.profi-card {
+    width: 510px;
+    height: 100%;
+    display: flex;
+    column-gap: 20px;
+}
+
+.profi-card__img {
+    width: 204px;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.profi-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profi-card__title {
+    margin-bottom: 43px;
+    line-height: 1.16;
+
+    h3 {
+        margin-bottom: 5px;
+        font-family: var(--second-family);
+        font-size: 24px;
+        color: var(--rozovyy-norm);
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    span {
+        font-size: 11px;
+    }
+}
+
+.profi-card__text {
+    font-size: 14px;
+    line-height: 1.16;
+}
+
+.profi-card__text p + p {
+    margin-top:  15px;
+}
+
+.profi__btn {
+    display: flex;
+    justify-content: center;
+}
