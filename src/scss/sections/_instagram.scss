@@ -1,0 +1,70 @@
+.instagram__content {
+    width: calc(50% + 50vw);
+    display: flex;
+    overflow: hidden;
+    column-gap: 9px;
+}
+
+.instagram__col {
+    padding-bottom: 30px;
+    flex-shrink: 0;
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.instagram__text {
+    flex-shrink: 0;
+    align-self: flex-end;
+    max-width: 233px;
+
+    p {
+        margin-bottom: 19px;
+        font-size: 14px;
+        line-height: 1.1;
+    }
+
+    a {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 0.94;
+        text-decoration: underline;
+        text-decoration-skip-ink: none;
+        color: #494949;
+    }
+}
+
+.instagram-slider {
+    padding-bottom: 30px;
+    width: calc(100% - 268px);
+}
+
+.instagram-slider .swiper-pagination {
+    // display: flex;
+    // column-gap: 14px;
+    bottom: 0;
+}
+
+/* Стили для пагинации Swiper */
+.instagram-slider .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #a7a7a7;
+    opacity: 1;
+    margin: 0 7px;
+  }
+
+  .instagram-slider .swiper-pagination .swiper-pagination-bullet-active {
+    background: #000;
+  }
+
+.instagram-photo {
+    width: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+

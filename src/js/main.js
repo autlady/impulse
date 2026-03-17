@@ -212,4 +212,19 @@ Fancybox.bind('[data-fancybox]', {
     },
   },
 });
+
+// instagram slider
+
+const swiperInsta = new Swiper('.instagram-slider', {
+  // Optional parameters
+  slidesPerView: 3,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+  },
+});
+/************************************* */
+
 });
