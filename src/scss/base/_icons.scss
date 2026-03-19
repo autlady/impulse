@@ -8,6 +8,23 @@
     height: 8px;
 }
 
+.social-icons {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    column-gap: 31px;
+
+    .svg-insta, .svg-vk, .svg-wa {
+        width: 33px;
+        height: 33px;
+        color: var(--rozovyy-norm);
+    }
+}
+
+.social-icons a:hover {
+    opacity: .7;
+}
+
 .social-group {
     display: flex;
     align-items: center;
