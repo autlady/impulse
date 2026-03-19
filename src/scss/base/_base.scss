@@ -154,14 +154,19 @@ main {
 .headline {
   margin-bottom: 46px;
   font-family: var(--second-family);
-  font-size: 48px;
+  font-size: clamp(24px, 4.8vw + 14.4px, 48px);
   line-height: 1.16;
   color: #fff;
+
+  @media (max-width: 920px) {
+    margin-bottom: 20px;
+}
+
 }
 
 .section-title {
   font-family: var(--second-family);
-  font-size: 48px;
+  font-size: clamp(24px, 4.8vw + 14.4px, 48px);
   line-height: 0.94;
   color: var(--rozovyy-norm);
 }
