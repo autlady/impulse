@@ -1,0 +1,31 @@
+.footer {
+    padding: 25px 0 22px;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo {
+    position: relative;
+}
+
+.footer__logo::after,
+.footer__logo::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    height: 1.5px;
+    background-color: var(--rozovyy-norm);
+    width: 60px;
+    transform: translateY(100%);
+}
+
+.footer__logo::before {
+    left: -75px;
+}
+
+.footer__logo::after {
+    right: -75px;
+}
