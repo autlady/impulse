@@ -2,10 +2,21 @@
     overflow: hidden;
 }
 
+.profi__title {
+    @media (max-width: 960px) {
+       margin-bottom: 20px;
+    }
+}
+
 .profi-content {
     margin-bottom: 34px;
     display: flex;
     column-gap: 20px;
+
+    @media (max-width: 960px) {
+        display: block;
+        margin-bottom: 50px;
+    }
 }
 
 .profi-col {
@@ -14,12 +25,23 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 960px) {
+        display: block;
+        width: 100%;
+    }
 }
 
 .tabs {
     align-self: flex-end;
     flex-shrink: 0;
     max-width: 223px;
+
+    @media (max-width: 960px) {
+        margin-bottom: 20px;
+        align-self: flex-start;
+        max-width: 60%;
+    }
 }
 
 .tab-btn {
@@ -29,10 +51,20 @@
     font-size: 14px;
     line-height: 1.16;
     color: #000;
+
+    @media (max-width: 960px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .tab-btn .svg-arrow {
     margin-left: 10px;
+
+    @media (max-width: 960px) {
+        transform: rotate(90deg);
+    }
 }
 
 .tab-btn::before {
@@ -80,10 +112,29 @@
 
     .slider-prev {
         transform: rotate(-90deg);
+
+        @media (max-width: 960px) {
+            transform: rotate(-180deg);
+        }
     }
 
     .slider-next {
         transform: rotate(90deg);
+
+        @media (max-width: 960px) {
+            transform: rotate(0deg);
+        }
+    }
+
+    @media (max-width: 960px) {
+        width: 510px;
+        position: absolute;
+        top: auto;
+        right: 0;
+        left: 0;
+        bottom: -40px;
+        flex-direction: row;
+        column-gap: 47px;
     }
 }
 

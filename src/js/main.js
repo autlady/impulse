@@ -92,7 +92,7 @@ const nextBtn = document.getElementById('slider-next-profi');
 const swipers = [];
 swiperContainers.forEach((container, index) => {
   const swiperProfi = new Swiper(container, {
-    direction: 'vertical',
+    direction: 'horizontal',
     slidesPerView: 1,
     spaceBetween: 16,
     on: {
@@ -101,6 +101,11 @@ swiperContainers.forEach((container, index) => {
         setTimeout(updateNavigation, 100);
       },
       slideChange: updateNavigation
+    },
+    breakpoints: {
+      961: {
+        direction: 'vertical',
+      },
     }
   });
   swipers.push(swiperProfi);
