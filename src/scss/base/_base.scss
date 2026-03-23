@@ -147,6 +147,10 @@ main {
 
 .section-box {
   padding-block: 30px;
+
+  @media (max-width: 920px) {
+    padding-block: 20px;
+}
 }
 
 // TYPOGRAPHY

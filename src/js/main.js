@@ -59,9 +59,13 @@ const Swiper = window.Swiper;
           clickable: true,
         },
         breakpoints: {
-          525: {
+          430: {
             spaceBetween: 16,
             slidesPerView: 2,
+          },
+          680: {
+            spaceBetween: 16,
+            slidesPerView: 3,
           },
         },
       });
