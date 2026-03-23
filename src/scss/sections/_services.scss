@@ -3,6 +3,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     width: 100%;
+
+    @media (max-width: 475px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .services__title {
@@ -16,7 +20,6 @@
 
   .service__img {
     width: 100%;
-    // height: 230px;
     aspect-ratio: 194 / 115;
 
     img {
@@ -36,8 +39,13 @@
   }
 
   .service__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 12px 0 13px;
-    text-align: center;
-    height: 42px;
     font-size: 18px;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+    }
   }
