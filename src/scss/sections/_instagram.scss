@@ -26,6 +26,10 @@
         width: 70%;
         display: block;
     }
+
+    @media (max-width: 375px) {
+        width: 100%;
+    }
 }
 
 .instagram__text {
@@ -66,6 +70,12 @@
     }
 }
 
+.instagram-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .instagram-slider .swiper-pagination {
     bottom: 0;
 }
@@ -87,6 +97,11 @@
 
     img {
         width: 100%;
+    }
+
+    @media (max-width: 460px) {
+
+        width: 200px;
     }
 }
 
