@@ -226,12 +226,22 @@ Fancybox.bind('[data-fancybox]', {
 
 const swiperInsta = new Swiper('.instagram-slider', {
   // Optional parameters
-  slidesPerView: 3,
-  spaceBetween: 20,
+  slidesPerView: 1,
+  spaceBetween: 16,
   loop: true,
   pagination: {
     el: '.swiper-pagination',
     type: 'bullets',
+  },
+  breakpoints: {
+    380: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+    525: {
+      spaceBetween: 20,
+      slidesPerView: 3,
+    },
   },
 });
 /************************************* */
