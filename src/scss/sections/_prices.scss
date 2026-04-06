@@ -1,0 +1,52 @@
+.prices__title {
+    margin-bottom: 15px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .table-head {
+    font-weight: 500;
+    font-size: 18px;
+  }
+
+  .cell {
+    padding-block: 10px;
+    position: relative;
+  }
+
+  .cell-name {
+    flex: 1;
+  }
+
+  .cell-time {
+    width: 200px;
+  }
+
+  .cell-price {
+    width: 90px;
+  }
+
+  .dots {
+    display: inline-block;
+    vertical-align: baseline;
+    flex-grow: 1;
+    margin-left: 5px;
+    border-bottom: 1px dotted #000;
+    height: 0;
+  }
+
+  .cell-name, .cell-time {
+    display: flex;
+    align-items: baseline;
+  }
+

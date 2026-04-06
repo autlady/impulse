@@ -1,0 +1,17 @@
+.header-inner .header-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), image-set(url(../img/inner-bg.webp) 1x, url(../img/inner-bg@2x.webp) 2x);
+    height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .header-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 920px) {
+        height: auto;
+    }
+}

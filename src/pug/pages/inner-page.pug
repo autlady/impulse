@@ -1,0 +1,11 @@
+extends ../layouts/layout.pug
+
+block variables
+	-var title = "Inner Page";
+
+block content
+	include ../sections/header-inner.pug
+	main
+		include ../sections/prices.pug
+		include ../sections/presentation.pug
+	include ../sections/footer.pug
