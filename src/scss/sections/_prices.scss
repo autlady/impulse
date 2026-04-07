@@ -3,40 +3,41 @@
 }
 
 .table {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  .row {
+.row {
     display: flex;
     width: 100%;
     font-size: 16px;
   }
 
-  .table-head {
+.table-head {
     font-weight: 500;
     font-size: 18px;
   }
 
-  .cell {
+.cell {
     padding-block: 10px;
     position: relative;
   }
 
-  .cell-name {
+.cell-name {
     flex: 1;
   }
 
-  .cell-time {
+.cell-time {
     width: 200px;
   }
 
-  .cell-price {
+.cell-price {
     width: 90px;
   }
 
-  .dots {
+.dots {
     display: inline-block;
     vertical-align: baseline;
     flex-grow: 1;
@@ -45,8 +46,9 @@
     height: 0;
   }
 
-  .cell-name, .cell-time {
+.cell-name, .cell-time {
     display: flex;
     align-items: baseline;
+    padding-right: 5px;
   }
 

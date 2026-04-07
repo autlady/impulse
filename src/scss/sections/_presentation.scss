@@ -1,0 +1,55 @@
+.presentation-slider .slider-btns {
+    display: flex;
+    margin-bottom: 100px;
+    // position: absolute;
+    // right: 0;
+    // bottom: 0;
+}
+
+.swiper.presentation-slider {
+    max-width: 1000px;
+    height: 300px;
+}
+
+
+.presentation-slider .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px; /* базовая ширина */
+    opacity: 0.7;
+    transform: scale(0.8);
+    transition: transform 0.3s, opacity 0.3s;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+}
+
+.presentation-slider .swiper-slide-active {
+    width: 428px;
+    opacity: 1;
+    transform: scale(1.2);
+    z-index: 1;
+  }
+
+.presentation-photo {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.slider-prev-circle,
+.slider-next-circle {
+    width: 39px;
+    height: 39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--rozovyy-norm);
+}

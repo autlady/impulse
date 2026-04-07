@@ -140,27 +140,32 @@ tabButtons.forEach((button, index) => {
 });
 
 // Общая навигация для всех слайдеров
-prevBtn.addEventListener('click', () => {
-  // Находим активный слайдер и вызываем метод prev()
-  const activeSwiper = swipers.find((_, index) =>
-    swiperContainers[index].classList.contains('active')
-  );
-  if (activeSwiper && !activeSwiper.isBeginning) {
-    activeSwiper.slidePrev();
-    updateNavigation(); // обновляем состояние стрелок
-  }
-});
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => {
+    // Находим активный слайдер и вызываем метод prev()
+    const activeSwiper = swipers.find((_, index) =>
+      swiperContainers[index].classList.contains('active')
+    );
+    if (activeSwiper && !activeSwiper.isBeginning) {
+      activeSwiper.slidePrev();
+      updateNavigation(); // обновляем состояние стрелок
+    }
+  });
+}
 
-nextBtn.addEventListener('click', () => {
-  // Находим активный слайдер и вызываем метод next()
-  const activeSwiper = swipers.find((_, index) =>
-    swiperContainers[index].classList.contains('active')
-  );
-  if (activeSwiper && !activeSwiper.isEnd) {
-    activeSwiper.slideNext();
-    updateNavigation(); // обновляем состояние стрелок
-  }
-});
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    // Находим активный слайдер и вызываем метод next()
+    const activeSwiper = swipers.find((_, index) =>
+      swiperContainers[index].classList.contains('active')
+    );
+    if (activeSwiper && !activeSwiper.isEnd) {
+      activeSwiper.slideNext();
+      updateNavigation(); // обновляем состояние стрелок
+    }
+  });
+}
+
 
 function updateNavigation() {
   const activeSwiper = swipers.find((_, index) =>
@@ -208,7 +213,9 @@ function updateNavigation() {
   }
 
 // Активируем первый таб по умолчанию
-activateTab(0);
+if (tabButtons.length > 0) {
+  activateTab(0);
+}
 
 /* ==== Fancybox ===== */
 Fancybox.bind('[data-fancybox]', {
@@ -246,4 +253,16 @@ const swiperInsta = new Swiper('.instagram-slider', {
 });
 /************************************* */
 
+const swiperPresent = new Swiper('.presentation-slider', {
+  // Optional parameters
+  centeredSlides: true,
+  slidesPerView: 3,
+  spaceBetween: 36,
+  loop: true,
+  navigation: {
+    nextEl: '#slider-next-present',
+    prevEl: '#slider-prev-present',
+  },
+});
+/************************************* */
 });
