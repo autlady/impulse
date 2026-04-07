@@ -3,14 +3,23 @@ section.presentation.section-box
     .container
         h2.presentation__title.section-title Наши<br> работы
     .swiper.presentation-slider
-        //- .slider-btns
-        //-     button.slider-prev-circle#slider-prev-present
-        //-         svg.svg-prev
-        //-             use(href="./img/spriteSvg.svg#svg-prev")
-        //-     button.slider-next-circle#slider-next-present
-        //-         svg.svg-next
-        //-             use(href="./img/spriteSvg.svg#svg-next")
+        .slider-btns
+            button.slider-prev-circle#slider-prev-present
+                svg.svg-prev
+                    use(href="./img/spriteSvg.svg#svg-prev")
+            button.slider-next-circle#slider-next-present
+                svg.svg-next
+                    use(href="./img/spriteSvg.svg#svg-next")
         .swiper-wrapper
+            .swiper-slide
+                .presentation-photo
+                    img(src="./img/presentation/presentation01.webp", alt="стрижка", width="428", height="300")
+            .swiper-slide
+                .presentation-photo
+                    img(src="./img/presentation/presentation01.webp", alt="стрижка", width="428", height="300")
+            .swiper-slide
+                .presentation-photo
+                    img(src="./img/presentation/presentation01.webp", alt="стрижка", width="428", height="300")
             .swiper-slide
                 .presentation-photo
                     img(src="./img/presentation/presentation01.webp", alt="стрижка", width="428", height="300")

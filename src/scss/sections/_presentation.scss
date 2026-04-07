@@ -1,9 +1,13 @@
 .presentation-slider .slider-btns {
+    column-gap: 320px;
+    justify-content: center;
+    z-index: 4;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0;
+    right: 0;
+    position: absolute;
     display: flex;
-    margin-bottom: 100px;
-    // position: absolute;
-    // right: 0;
-    // bottom: 0;
 }
 
 .swiper.presentation-slider {
@@ -16,20 +20,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 250px; /* базовая ширина */
+    padding: 0 25px;
+    width: 250px;
     opacity: 0.7;
-    transform: scale(0.8);
+    transform: scale(1);
     transition: transform 0.3s, opacity 0.3s;
-
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
 }
 
 .presentation-slider .swiper-slide-active {
-    width: 428px;
     opacity: 1;
-    transform: scale(1.2);
+    transform: scale(1.38);
     z-index: 1;
   }
 
