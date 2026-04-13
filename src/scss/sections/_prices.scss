@@ -1,3 +1,11 @@
+.prices {
+  padding-block: 50px;
+
+  @media (max-width: 920px) {
+    padding-block: 35px;
+  }
+}
+
 .prices__title {
     margin-bottom: 15px;
 }
@@ -13,11 +21,20 @@
     display: flex;
     width: 100%;
     font-size: 16px;
+
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
   }
 
 .table-head {
     font-weight: 500;
     font-size: 18px;
+
+    @media (max-width: 480px) {
+      display: none;
+    }
   }
 
 .cell {
@@ -27,14 +44,33 @@
 
 .cell-name {
     flex: 1;
+
+    @media (max-width: 480px) {
+      width: 100%;
+      flex: auto;
+      font-weight: 500;
+    }
   }
 
 .cell-time {
     width: 200px;
+
+    @media (max-width: 720px) {
+      width: 100px;
+    }
+
+    @media (max-width: 480px) {
+      width: 50%;
+    }
   }
 
 .cell-price {
     width: 90px;
+
+    @media (max-width: 480px) {
+      width: 50%;
+      text-align: end;
+    }
   }
 
 .dots {
@@ -44,6 +80,10 @@
     margin-left: 5px;
     border-bottom: 1px dotted #000;
     height: 0;
+
+    @media (max-width: 720px) {
+      display: none;
+    }
   }
 
 .cell-name, .cell-time {

@@ -171,7 +171,8 @@ main {
 .inner-headline {
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 64px;
+  font-size: clamp(20px, 4vw + 28px, 64px);
+  line-height: 1.16;
   color: #fff;
 }
 

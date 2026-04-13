@@ -263,6 +263,21 @@ const swiperPresent = new Swiper('.presentation-slider', {
     nextEl: '#slider-next-present',
     prevEl: '#slider-prev-present',
   },
+
+  breakpoints: {
+    320: {
+      spaceBetween: 16,
+      slidesPerView: 1,
+    },
+    535: {
+      spaceBetween: 20,
+      slidesPerView: 2,
+    },
+    720: {
+      spaceBetween: 36,
+      slidesPerView: 3,
+    },
+  },
 });
 /************************************* */
 });
