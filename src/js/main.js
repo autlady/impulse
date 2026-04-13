@@ -256,7 +256,7 @@ const swiperInsta = new Swiper('.instagram-slider', {
 const swiperPresent = new Swiper('.presentation-slider', {
   // Optional parameters
   centeredSlides: true,
-  slidesPerView: 3,
+  slidesPerView: 1,
   spaceBetween: 36,
   loop: true,
   navigation: {

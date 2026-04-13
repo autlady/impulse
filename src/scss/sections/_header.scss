@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     padding: 19px 0 10px;
-    z-index: 10;
+    z-index: 5;
 
     @media (max-width: 920px) {
         justify-content: space-between;
@@ -28,7 +28,7 @@
 
 .header-top.active::after {
     background: #000;
-    z-index: 7;
+    z-index: 10;
 }
 
 /* ======== header menu ========= */
@@ -66,6 +66,15 @@
 
 }
 
+
+.menu__list {
+    padding-left: 40px;
+
+    @media (max-width: 920px) {
+        padding-left: 0;
+    }
+}
+
 .menu__list li {
     text-align: center;
 
@@ -93,7 +102,7 @@
     align-items: center;
     width: 40px;
     height: 40px;
-    z-index: 10;
+    z-index: 77;
 
     @media (max-width: 920px) {
         margin-left: 15px;

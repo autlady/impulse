@@ -14,17 +14,17 @@
     display: flex;
 
     @media (max-width: 965px) {
+        position: relative;
         top: auto;
-        bottom: -18px;
+        bottom: -15px;
         column-gap: 30px;
     }
-
-    @media (max-width: 850px) {
-        bottom: 0px;
-    }
-
-    @media (max-width: 710px) {
-        display: none;
+    
+    @media (max-width: 965px) {
+        position: relative;
+        top: auto;
+        bottom: -15px;
+        column-gap: 30px;
     }
 }
 
